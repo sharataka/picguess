@@ -1,0 +1,29 @@
+<div class = "container">
+
+	<div class = "row">
+
+	  <% @locations.each do |location| %>
+
+		<div class="col-md-4">
+			
+			<center>
+			<a href = "/map_page/location/<%= location.id %>">
+				<img src="<%= location.imagelink %>" alt = "Picture hint" class="img-responsive" style = "width:100%">
+			</a>
+			</center>
+
+			<a href = "">
+				<%= location.hint %>
+			</a>
+
+			<hr width="50%">
+			<br><br>
+		
+		</div>
+
+
+	  <% end %>
+
+	</div>
+
+</div>

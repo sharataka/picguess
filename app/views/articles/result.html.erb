@@ -1,0 +1,50 @@
+<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 50%;
+      }
+</style>
+
+<script>
+
+var map;
+var markers = [];
+
+function initMap() {
+  var haightAshbury = {lat: 37.769, lng: -122.446};
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: haightAshbury,
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  });
+
+  // Adds a marker at the center of the map.
+  addMarker(haightAshbury);
+}
+
+// Adds a marker to the map and push to the array.
+function addMarker(location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    animation: google.maps.Animation.DROP,
+    map: map
+  });
+  markers.push(marker);
+}
+
+
+
+
+
+
+
+</script>
+
+
+<div id="map"></div>
+
